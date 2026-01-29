@@ -1,0 +1,327 @@
+.card {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+}
+
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(65, 37, 168, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 10%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(229, 22, 248, 0.12) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.card-title {
+  text-align: center;
+  margin-bottom: 20px;
+  animation: fadeInDown 0.8s ease-out;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card-title h1 {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(270deg, #4125a8 10%, #e516f8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.card-title h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(270deg, #4125a8 10%, #e516f8 100%);
+  border-radius: 2px;
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+  animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.card-img::before {
+  content: '';
+  position: absolute;
+  inset: -3px;
+  background: linear-gradient(135deg, #4125a8, #e516f8);
+  border-radius: 18px;
+  filter: blur(20px);
+  opacity: 0.4;
+  z-index: -1;
+  transition: opacity 0.3s ease;
+}
+
+.card-img:hover::before {
+  opacity: 0.7;
+}
+
+.card-img img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.3);
+  transition: all 0.4s ease;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-img img:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow: 0 35px 80px rgba(65, 37, 168, 0.4);
+}
+
+.card p {
+  font-size: 1.35rem;
+  line-height: 1.9;
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 400;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 40px;
+  padding: 40px 50px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.15);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  position: relative;
+  animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+
+.card p::before {
+  content: '"';
+  position: absolute;
+  top: 15px;
+  left: 25px;
+  font-size: 4rem;
+  font-weight: 700;
+  background: linear-gradient(270deg, #4125a8 10%, #e516f8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  opacity: 0.3;
+  line-height: 1;
+}
+
+.card-link {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease-out 0.6s backwards;
+}
+
+.card-link a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 18px 40px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  min-width: 160px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.card-link a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.card-link a:hover::before {
+  left: 100%;
+}
+
+.card-link-1 {
+  background: linear-gradient(267deg, #4125a8 0.36%, #e516f8 102.06%);
+  color: white;
+  box-shadow: 0 8px 25px rgba(229, 22, 248, 0.4);
+}
+
+.card-link-1:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(229, 22, 248, 0.6);
+}
+
+.card-link-2 {
+  border: 2px solid #fff;
+  color: white;
+  box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.card-link-2:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 40px rgba(65, 37, 168, 0.4);
+  border-color: #e516f8;
+}
+
+.card > div:last-child {
+  text-align: center;
+  margin-top: auto;
+  padding-top: 40px;
+  animation: fadeIn 0.8s ease-out 0.8s backwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.card > div:last-child a {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 30px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+}
+
+.card > div:last-child a:hover {
+  background: rgba(65, 37, 168, 0.2);
+  border-color: #e516f8;
+  color: white;
+  transform: translateX(-5px);
+  box-shadow: 0 6px 25px rgba(229, 22, 248, 0.3);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 50px 20px;
+    gap: 35px;
+  }
+  
+  .card-title h1 {
+    font-size: 2.5rem;
+  }
+  
+  .card-link {
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .card-link a {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .card p {
+    font-size: 1.15rem;
+    padding: 30px 25px;
+  }
+
+  .card::before,
+  .card::after {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 40px 15px;
+  }
+  
+  .card-title h1 {
+    font-size: 2rem;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    padding: 25px 20px;
+  }
+
+  .card p::before {
+    font-size: 3rem;
+    top: 10px;
+    left: 15px;
+  }
+}
