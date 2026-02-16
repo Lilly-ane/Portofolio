@@ -11,14 +11,14 @@ export const projects = [
     id: 2,
     title: "NC-News",
     image: "../assets/project_two.svg",
-    liveLink: "#", // temporar
+    liveLink: "https://welcome-to-n-c-news.netlify.app/", 
     githubLink: "https://github.com/Lilly-ane/NC-news",
   },
   {
     id: 3,
     title: "My Portfolio",
     image: "../assets/project_three.svg",
-    liveLink: "#", // temporar
+    liveLink: "https://portofolio-lv.netlify.app/",
     githubLink: "https://github.com/Lilly-ane/Portofolio",
   },
 ];

@@ -1,4 +1,4 @@
-🔗  Live version : https://marika-ganczarczyk.netlify.app/
+🔗  Live version : 
 
 
 
@@ -31,29 +31,10 @@ Smooth scrolling and modern UI/UX
 🚀 Getting Started
 Prerequisites
 
-Node.js (v14 or higher)
-npm or yarn
+portofolio-lv.netlify.app
+welcome-to-n-c-news.netlify.app
+fruits-match-game.netlify.app
+wheater-across-the-world.netlify.app
 
 
-# Clone the repository
-https://github.com/MarikaGanczarczyk/my-portfolio.git
-
-# Navigate to the project directory
-cd my-portfolio/portfolio-react
-
-# Install dependencies
-npm install
-
-# Run the development server
-npm run dev
-
-# Open http://localhost:3000 to view it in your browser
-
-
-
-📫 Contact
-Feel free to reach out if you'd like to discuss my work or potential opportunities!
-
-Email: marikabartman27@gmail.com
-LinkedIn: www.linkedin.com/in/marika-gańczarczyk-1144ab295
 

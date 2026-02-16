@@ -1,4 +1,3 @@
 [build]
-base = "portfolio-react"
 publish = "dist"
 command = "npm run build"
